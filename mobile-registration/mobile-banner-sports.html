@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Registration</title>
+    <style type="text/css">
+      .sports-text {
+        font-weight: bold;
+      }
+      .divider {
+        background-color: #DADADA;
+        width: calc(21% - 10px);
+      }
+      .circle-divider {
+        display: none;
+      } 
+      .circle-divider-1{
+        display: inline;
+      }
+      .first-divider {
+        background-color: #ff6b00;
+      }
+      #three, #four{
+        border-color: #DADADA;
+        background-color: #DADADA;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d-flex flex-column container-main">
+      <h6 class="text-center">Sports</h6>
+      <div class="d-flex flex-row item-wrapper justify-content-center">
+        <div class="d-flex flex-column first-item mt-4">
+          <div id="one">&nbsp;&nbsp;1</div>
+        </div>
+        <div class="divider first-divider"></div>
+        <svg
+          height="10px"
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+          class="circle-divider circle-divider-1"
+        >
+          <circle cx="16" cy="16" r="16" fill="#ff6b00" />
+        </svg>
+        <div class="d-flex flex-column second-item mt-4">
+          <div id="two">&nbsp; 2</div>
+        </div>
+        <div class="divider second-divider"></div>
+        <svg
+          height="10px"
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+          class="circle-divider circle-divider-2"
+        >
+          <circle cx="16" cy="16" r="16" fill="#ff6b00" />
+        </svg>
+        <div class="d-flex flex-column third-item mt-4">
+          <div id="three">&nbsp; 3</div>
+        </div>
+        <div class="divider third-divider"></div>
+        <svg
+          height="10px"
+          viewBox="0 0 32 32"
+          xmlns="http://www.w3.org/2000/svg"
+          class="circle-divider circle-divider-3"
+        >
+          <circle cx="16" cy="16" r="16" fill="#ff6b00" />
+        </svg>
+        <div class="d-flex flex-column fourth-item mt-4">
+          <div id="four">&nbsp; 4</div>
+        </div>
+      </div>
+      <div class="d-flex flex-row m-1 p-1 text-item-wrapper ml-2">
+        <div class="d-flex flex-column mr-4 personal">
+          <div class="personal-text">Personal</div>
+        </div>
+        <div class="d-flex flex-column mr-5 ml-2 sports">
+          <div class="sports-text">Sports</div>
+        </div>
+        <div class="d-flex flex-column mr-4 ml-2 abilities">
+          <div class="abilities-text">Abilities</div>
+        </div>
+        <div class="d-flex flex-column mr-5 confirm">
+          <div class="confirm-text">Confirm</div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>test form</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css" />
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <style>
+    .main-post {
+      width: 60%;
+      margin: 3%;
+      margin-left: 23%;
+    }
+
+    #drop-region {
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 35px rgba(0, 0, 0, 0.05);
+      width: 80%;
+      padding: 60px 40px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10%;
+      margin-bottom: 10%;
+      margin-left: 10%;
+    }
+
+    #drop-region:hover {
+      box-shadow: 0 0 45px rgba(255, 166, 0, 0.425);
+    }
+
+    #image-preview {
+      margin-top: 20px;
+    }
+
+    #image-preview .image-view {
+      display: inline-block;
+      position: relative;
+      margin-right: 13px;
+      margin-bottom: 13px;
+    }
+
+    #image-preview .image-view img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+
+    #add-image {
+      background-color: #fff;
+    }
+
+    input,
+    label {
+      display: block;
+      text-align: center;
+    }
+
+    .text-post-form {
+      text-align: center;
+    }
+
+    #birth {
+      margin-top: 30px;
+    }
+
+    #submit-post {
+      background-color: orange;
+      margin-left: 35%;
+      margin-top: 40px;
+      width: 30%;
+      height: 10%;
+      margin-bottom: 80px;
+    }
+
+    .card-avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 2px solid #ff6b00;
+      margin: 1% 1% 0 1%;
+    }
+
+    input {
+      display: inline-block;
+      margin-bottom: 5%;
+    }
+
+    .main-categories-mini {
+      height: 100%;
+      width: 100%;
+      margin-top: 10%;
+      overflow-x: scroll;
+      background: #e8e8e8;
+      box-sizing: border-box;
+      text-align: center;
+      margin-bottom: 10%;
+    }
+
+    .scroll-item:hover{
+      opacity: 0.4;
+      cursor: pointer;
+      text-decoration: underline;
+      color: #ff6b00;
+    }
+
+    .time-picker{
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-post">
+    <div class="post-form">
+      <div class="card card-formPost">
+        <form id="formTest" name="formPost">
+          <div class="card-header">
+            <img src="img/pfp/avatar.jpg" class="card-avatar" placeholder="Avatar user" />
+            <span class="username-post">Manuel210992</span>
+            <div class="post-info"></div>
+          </div>
+          <div>
+            <label>
+              <h2>Titre de votre poste</h2>
+            </label>
+            <div class="input-form-wrapper">
+              <input type="text" name="post-headline" required />
+            </div>
+          </div>
+          <div id="drop-region">
+            <h2 id="drop-file-text">Click here to upload your files</h2>
+            <div class="drop-message m-5">
+              <svg version="1.1" id="add-image" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="56.513px" height="56.513px"
+                viewBox="0 0 316.513 316.513" style="enable-background: new 0 0 316.513 316.513" xml:space="preserve">
+                <defs>
+                  <linearGradient id="gradient">
+                    <stop offset="0%" stop-color="rgba(255,162,109,1)" />
+                    <stop offset="10%" stop-color="rgba(255,162,109,1)" />
+                    <stop offset="37%" stop-color="rgba(223,211,34,1)" />
+                    <stop offset="102%" stop-color="rgba(226,161,31,1)" />
+                  </linearGradient>
+                </defs>
+                <g>
+                  <path fill="url(#gradient)"
+                    d="M158.253,0C71,0,0.012,71.001,0.012,158.263c0,87.256,70.989,158.25,158.241,158.25 c87.259,0,158.248-70.994,158.248-158.25C316.501,71.001,245.518,0,158.253,0z M230.891,177.982h-57.748v52.914 c0,7.428-4.864,13.438-12.301,13.438c-7.422,0-12.298-6.017-12.298-13.438v-52.914H85.634c-7.44,0-13.454-4.864-13.454-12.298 s6.014-12.301,13.454-12.301h62.909V85.616c0-7.434,4.876-13.453,12.298-13.453c7.437,0,12.301,6.02,12.301,13.453v67.768h57.748 c7.439,0,13.456,4.867,13.456,12.301S238.33,177.982,230.891,177.982z" />
+                </g>
+              </svg>
+            </div>
+            <div id="image-preview"></div>
+          </div>
+          <hr class="sep sep-form">
+          <h4 class="text-post-form">
+            <label class="blanc button px-2"> Date de l&#039évènement
+              <div class="input-form-wrapper">
+                <input id="event" type="date" name="date-event" required>
+              </div>
+            </label>
+          </h4>
+            <hr class="sep sep-form">
+            <h4 class="text-post-form">
+              <label class="blanc button px-2"> Lieu de l&#039évènement <div class="input-form-wrapper">
+                  <div class="input-form-wrapper">
+                    <input type="text" name="location-event" required />
+                  </div>
+              </label>
+            </h4>
+            <hr class="sep sep-form">
+            <div class="d-flex flex-row main-categories-mini">
+              <div class="d-flex flex-column scroll-item m-3">
+                <img src="img/Volley-ball.png" class="scroll-item-img" alt="Icon catégorie"></img>
+                <div class="scroll-item-title">Volleyball</div>
+              </div>
+              <div class="d-flex flex-column scroll-item m-3">
+                <img src="img/basket.jpg" class="scroll-item-img" alt="Icon catégorie"></img>
+                <div class="scroll-item-title">Basketballl</div>
+              </div>
+              <div class="d-flex flex-column scroll-item m-3">
+                <img src="img/soccer.jpg" class="scroll-item-img" alt="Icon catégorie"></img>
+                <div class="scroll-item-title">Soccer</div>
+              </div>
+              <div class="d-flex flex-column scroll-item m-3">
+                <img src="img/bowling.jpg" class="scroll-item-img" alt="Icon catégorie"></img>
+                <div class="scroll-item-title">Bowling</div>
+              </div>
+              <div class="d-flex flex-column scroll-item m-3">
+                <img src="img/badminton.png" class="scroll-item-img" alt="Icon catégorie"></img>
+                <div class="scroll-item-title">Badminton</div>
+              </div>
+              <div class="d-flex flex-column scroll-item m-3">
+                <img src="img/run.jpg" class="scroll-item-img" alt="Icon catégorie"></img>
+                <div class="scroll-item-title">Course à pied</div>
+              </div>
+              <div class="d-flex flex-column scroll-item m-3">
+                <img src="img/muscle.jpg" class="scroll-item-img" alt="Icon catégorie"></img>
+                <div class="scroll-item-title">Musculation</div>
+              </div>
+              <div class="d-flex flex-column scroll-item m-3">
+                <img src="img/dance.jfif" class="scroll-item-img" alt="Icon catégorie"></img>
+                <div class="scroll-item-title">Danse</div>
+              </div>
+              <div class="d-flex flex-column scroll-item m-3">
+                <img src="img/lutte.jpg" class="scroll-item-img" alt="Icon catégorie"></img>
+                <div class="scroll-item-title">Lutte</div>
+              </div>
+              <div class="d-flex flex-column scroll-item m-3">
+                <img src="img/Boxe.png" class="scroll-item-img" alt="Icon catégorie"></img>
+                <div class="scroll-item-title">Boxe</div>
+              </div>
+              <div class="d-flex flex-column scroll-item m-3">
+                <img src="img/rugby.jfif" class="scroll-item-img" alt="Icon catégorie"></img>
+                <div class="scroll-item-title">Rugby</div>
+              </div>
+              <div class="d-flex flex-column scroll-item m-3">
+                <img src="img/climb.png" class="scroll-item-img" alt="Icon catégorie"></img>
+                <div class="scroll-item-title">Escalade</div>
+              </div>
+            </div>
+            
+            <div class="md-form">
+              <h4 class="text-post-form">
+                <label for="input_starttime">
+                  Heure de l&#039évènement
+                  <div class="time-picker">
+                    <input id="timepicker" width="276" />
+                  </div>
+                </label>
+              </h4>
+            </div>
+            
+            <button class="btn p-1" type="submit" id="submit-post">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>
+  </script>
+  <script type="text/javascript">
+    $('#timepicker').timepicker({ mode: '24hr' });
+  </script>
+</body>
+
+</html>

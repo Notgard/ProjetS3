@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Test</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body class="h-100 w-100">
+        <div class="d-flex flex-column w-50 m-auto">
+            <form class="d-flex flex-column" name="AddQuestion" method="POST" action="test.php" enctype="multipart/form-data">
+                <input name="image" type="file" accept=".png, .jpg, .jpeg" class="m-5">
+                <div class="d-flex justify-content-between">
+                    <a class="m-5 p-2 buttonquitter" href="."><svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.8 16.875V13.5H12.1333V10.125H20.8V6.75L26 11.8125L20.8 16.875ZM19.0667 15.1875V21.9375H10.4V27L0 21.9375V0H19.0667V8.4375H17.3333V1.6875H3.46667L10.4 5.0625V20.25H17.3333V15.1875H19.0667Z" fill="white"/>
+                        </svg>
+                        Quitter    
+                    </a>
+                    <button class="m-5 p-2 px-3 buttonvalider" type="submit">Valider</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

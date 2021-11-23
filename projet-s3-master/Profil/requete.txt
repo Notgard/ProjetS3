@@ -1,0 +1,24 @@
+--------------------------------------   requête pour tous les attributs du profil de User ------------------------------------------------
+
+SELECT im.content AS "image" , 
+CONCAT(lastName , firstName) AS "pseudo", 
+role , 
+COUNT(pu.idPublication) AS "publication", 
+COUNT(Use_idUser) AS "amie" , 
+bio
+FROM User us , Publication pu , avoir_en_ami am , image im 
+WHERE pu.idUser = idUser and idUser = am.idUser and us.idImage = im.idImage;
+
+
+----------------------------------------------------  requête pour publication --------------------------------------------------------------
+
+SELECT idPublication , 
+	im.content, 
+    pu.idUser , 
+    dateDePublication , 
+    message , 
+    isEvent
+FROM Publication pu JOIN User us ON (pu.idUser = us.idUser)
+	JOIN Image im on (im.IDIMAGE = pu.IDIMAGE)
+WHERE pu.idUser = 1 
+ORDER BY dateDePublication DESC;

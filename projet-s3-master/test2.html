@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Test</title>
+    </head>
+	<script type="text/javascript" src="js/ajaxrequest.js"></script>
+	<script type="text/javascript">
+
+// Fonction appelée au chargement complet de la page
+window.onload = function() {
+	var ajax = new AjaxRequest({
+		url: 'http://stoupy.ga:7777/',
+		method: 'post',
+		parameters: {},
+		onSuccess: function(res) {
+			var html = document.getElementsByTagName("html")[0];
+			html.innerHTML = res;
+		},
+		onError: function(status, message) {
+			window.alert('Error : ' + status + ":" + message)
+		}
+	});
+}
+	</script>
+	<body>
+		<div id="div"></div>
+    </body>
+</html>
